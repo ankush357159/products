@@ -1,0 +1,9 @@
+<div class="main">
+    <form method="POST">
+        {% csrf_token%}
+
+        Are you sure want to delete this item?
+        <input type="submit" value="Yes">
+        <a href="/api/v1/list/">Cancel</a>
+    </form>
+</div>

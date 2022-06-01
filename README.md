@@ -1,0 +1,1 @@
+🚀 Django Based Project 🚀

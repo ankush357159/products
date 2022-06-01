@@ -24,12 +24,19 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'livesync',
     'django.contrib.staticfiles',
     'store',
     'book',
+    'demo',
 ]
 
+DJANGO_LIVESYNC = {
+    'PORT': 8000 # this is optional and is default set to 9001.
+}
+
 MIDDLEWARE = [
+    'livesync.core.middleware.DjangoLiveSyncMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -116,7 +123,10 @@ STATIC_URL = '/static/'
 # STATICFILES_ROOT = [
 #     os.path.join(BASE_DIR, 'static')
 # ]
-STATICFILES_DIRS = [
-    # BASE_DIR / "static",
+
+# Specify the directory where Django will collect static files for your project.
+# For example for static directory in my_app/static/demoapp
+STATICFILES_DIRS = [    
     os.path.join((BASE_DIR), 'static'),
+    # os.path.join('BASE_DIR', 'demoapp)
 ]

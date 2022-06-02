@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'store',
     'book',
     'demo',
+    'bunny',
 ]
 
 DJANGO_LIVESYNC = {
@@ -115,6 +116,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
 
 # # Line below tells django that static folder is created
@@ -128,5 +130,7 @@ STATIC_URL = '/static/'
 # For example for static directory in my_app/static/demoapp
 STATICFILES_DIRS = [    
     os.path.join((BASE_DIR), 'static'),
-    # os.path.join('BASE_DIR', 'demoapp)
+    os.path.join(BASE_DIR, 'bunny/static'),
 ]
+
+MEDIA_ROOT = os.path.join((BASE_DIR), 'media')

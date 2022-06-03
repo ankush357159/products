@@ -1,0 +1,26 @@
+{% extends 'bunny/base.html' %}
+{% block petform %}
+
+<div class="container d-flex justify-content-center align-items-auto">
+    <div>
+        <h4 class="text-center">Pet Details</h4>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="form-group pb-2">{{form.name}}</div>
+            <div class="form-group pb-2">{{form.age}}</div>
+            <div class="form-group pb-2">{{form.breed}}</div>
+            <div class="form-group pb-2">{{form.color}}</div>
+            <div class="form-group pb-2">{{form.weight}}</div>
+            <div class="form-group pb-2">{{form.photo}}</div>
+
+            <div class="form-group text-center pt-3">
+                <input class="btn btn-success " type="submit" value="Submit">
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

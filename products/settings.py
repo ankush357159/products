@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'book',
     'demo',
     'bunny',
+    'polls.apps.PollsConfig',
 ]
 
 DJANGO_LIVESYNC = {
@@ -103,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -134,3 +135,5 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = os.path.join((BASE_DIR), 'media')
+
+READ_ONLY_FILE = os.path.join(BASE_DIR, 'readonly')
